@@ -14,9 +14,9 @@ const useFetch = (API_URL) => {
       setFetched_Data(response.data)
       setLoading(false)
 
-      // http://localhost:5000/uploads/02e2af9df9c9a02234688a77241924f2 CORRECT
+      // http://localhost:4000/uploads/02e2af9df9c9a02234688a77241924f2 CORRECT
 
-      // http://localhost:5000/uploads\bb367469a423603133b0c570eda20730
+      // http://localhost:4000/uploads\bb367469a423603133b0c570eda20730
 
       // If response ma Image exists then handle it , else default value set or Undefined error aauxa
       if (response.data.data && response.data.data.image) {

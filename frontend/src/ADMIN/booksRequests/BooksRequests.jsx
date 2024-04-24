@@ -44,14 +44,13 @@ const BooksRequests = () => {
       const response = await axios.patch(Pending_Book_API_Url, {
         id: transactionId,
         issueStatus: bookIssueStatus,
-      })
-      toast.success('Update Success')
-      fetchPendingBooks()
+      });
+      toast.success('Update Success');
+      fetchPendingBooks();
     } catch (error) {
-      console.log(error.response)
+      console.log(error.response);
     }
-  }
-
+  };
   const handleSelectChange = (e) => {
     const selectedIssueStatus = e.target.value
     setBookIssueStatus(selectedIssueStatus)
@@ -70,6 +69,7 @@ const BooksRequests = () => {
                   <th scope='col'>Username</th>
                   <th scope='col'>Email</th>
                   <th scope='col'>Book</th>
+                  {/* <th scope='col'>Image</th> */}
                   <th scope='col'>Status</th>
                   <th scope='col'> Update</th>
                 </tr>
@@ -79,42 +79,47 @@ const BooksRequests = () => {
                 {pendingBooks.map((book, index) => {
                   const { _id, userEmail, bookTitle, issueStatus, username } =
                     book
-
+                    
                   return (
                     <tr key={_id}>
                       <th scope='row'>{index + 1}</th>
                       <td>{username}</td>
                       <td>{userEmail}</td>
                       <td>{bookTitle}</td>
+                      {/* <td><img src={imgSrc}  style={{ width: '100px', height: 'auto' }} /></td> */}
                       <td>{issueStatus}</td>
 
                       <td>
                         <form className='d-flex' onSubmit={handleFormSubmit}>
-                          <select
-                            className='form-control mx-1'
-                            // defaultValue='PENDING'
-                            defaultValue={issueStatus.toUpperCase()}
-                            onChange={handleSelectChange}
-                          >
-                            <option key='PENDING' value='PENDING'>
-                              PENDING
-                            </option>
-                            <option key='READY' value='READY'>
-                              READY to PICK
-                            </option>
-                            <option key='ACCEPTED' value='ACCEPTED'>
-                              ACCEPTED
-                            </option>
-                            <option key='CANCELLED' value='CANCELLED'>
-                              CANCELLED
-                            </option>
-                          </select>
-                          <button
-                            className='btn btn-success mx-1'
-                            onClick={() => handleFormUpdate(_id)}
-                          >
-                            Update
-                          </button>
+                        {!(issueStatus === 'ACCEPTED' || issueStatus === 'CANCELLED') && (
+                            <select
+                              className='form-control mx-1'
+                              defaultValue={issueStatus.toUpperCase()}
+                              onChange={handleSelectChange}
+                            >
+                              <option key='PENDING' value='PENDING'>
+                                PENDING
+                              </option>
+                              <option key='READY' value='READY'>
+                                READY to PICK
+                              </option>
+                              <option key='ACCEPTED' value='ACCEPTED'>
+                                ACCEPTED
+                              </option>
+                              <option key='CANCELLED' value='CANCELLED'>
+                                CANCELLED
+                              </option>
+                            </select>
+                          )}
+                          {(issueStatus === 'PENDING' || issueStatus === 'READY') && (
+                            <button
+                              className='btn btn-success mx-1'
+                              onClick={() => handleFormUpdate(_id)}
+                            >
+                              Update
+                            </button>
+                          )}
+                          
                         </form>
                       </td>
                     </tr>

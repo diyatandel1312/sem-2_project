@@ -1,7 +1,7 @@
 const BookList = require('../models/bookScheme')
 
 const getFilterData = async (req, res) => {
-  const { title, available, category, author, language, featured } = req.query
+  const { title, available, category, author, language,image, featured  } = req.query
   const queryObject = {}
 
   if (title) {
@@ -28,6 +28,10 @@ const getFilterData = async (req, res) => {
   if (language) {
     queryObject.language = { $regex: language, $options: 'i' }
   }
+  if (image) {
+    queryObject.image = { $regex: image, $options: 'i' }
+  }
+
 
   const result = await BookList.find(queryObject)
 

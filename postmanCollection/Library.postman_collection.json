@@ -12,11 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/filter?title=the&category=novel&author=fyo&language=english",
+					"raw": "localhost:4000/api/v1/filter?title=the&category=novel&author=fyo&language=english",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -64,11 +64,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/login",
+					"raw": "localhost:4000/api/v1/login",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -93,11 +93,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/signup",
+					"raw": "localhost:4000/api/v1/signup",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -122,11 +122,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/signup/verifyEmail",
+					"raw": "localhost:4000/api/v1/signup/verifyEmail",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -152,11 +152,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/signup/resendOtp",
+					"raw": "localhost:4000/api/v1/signup/resendOtp",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -173,11 +173,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/books",
+					"raw": "localhost:4000/api/v1/books",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -193,11 +193,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/book/?page=3",
+					"raw": "localhost:4000/api/v1/book/?page=3",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -229,11 +229,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/requestBooks",
+					"raw": "localhost:4000/api/v1/requestBooks",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -249,11 +249,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/requestBooks/",
+					"raw": "localhost:4000/api/v1/requestBooks/",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -270,11 +270,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/popularBooks",
+					"raw": "localhost:4000/api/v1/popularBooks",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -299,11 +299,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/requestBooks",
+					"raw": "localhost:4000/api/v1/requestBooks",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -319,11 +319,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/requestBooks/notreturnedbooks",
+					"raw": "localhost:4000/api/v1/requestBooks/notreturnedbooks",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -340,11 +340,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/users",
+					"raw": "localhost:4000/api/v1/users",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -360,11 +360,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/books/647973e99d1daac1a4e03787",
+					"raw": "localhost:4000/api/v1/books/647973e99d1daac1a4e03787",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -391,11 +391,11 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/books/updateImage/64c0a055f59443a74661b1a5",
+					"raw": "localhost:4000/api/v1/books/updateImage/64c0a055f59443a74661b1a5",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -413,11 +413,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/users/649179774afae22ac6166b6e",
+					"raw": "localhost:4000/api/v1/users/649179774afae22ac6166b6e",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -450,11 +450,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/users/?userId=648eb6cea9f4af7a36dec5e1",
+					"raw": "localhost:4000/api/v1/users/?userId=648eb6cea9f4af7a36dec5e1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -486,11 +486,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/users",
+					"raw": "localhost:4000/api/v1/users",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -506,11 +506,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/checkbookreturn",
+					"raw": "localhost:4000/api/v1/checkbookreturn",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -535,11 +535,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/requestBooks/issuebook",
+					"raw": "localhost:4000/api/v1/requestBooks/issuebook",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -565,11 +565,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/forgotpassword",
+					"raw": "localhost:4000/api/v1/forgotpassword",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -594,11 +594,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/forgotpassword",
+					"raw": "localhost:4000/api/v1/forgotpassword",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -614,11 +614,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/algotest",
+					"raw": "localhost:4000/api/algotest",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"algotest"
@@ -633,11 +633,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/recommendedBooks",
+					"raw": "localhost:4000/api/v1/recommendedBooks",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -653,11 +653,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/query",
+					"raw": "localhost:4000/api/v1/query",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -673,11 +673,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/adminHomePageInfo",
+					"raw": "localhost:4000/api/v1/adminHomePageInfo",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -702,11 +702,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/updateUserEmail",
+					"raw": "localhost:4000/api/v1/updateUserEmail",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -722,11 +722,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/v1/signup/resendOtp",
+					"raw": "localhost:4000/api/v1/signup/resendOtp",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -755,11 +755,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/api/v1/similarBooks/649682031faf3efe0d583fe6",
+					"raw": "localhost:4000/api/v1/similarBooks/649682031faf3efe0d583fe6",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "4000",
 					"path": [
 						"api",
 						"v1",

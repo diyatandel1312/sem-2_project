@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ManageSearchBooks from './ManageSearchBooks'
+import CategoriesSearch from './CategoriesSearch'
 import axios from 'axios'
 import './managebooks.css'
 import CustomPagination from '../../CLIENT/pagination/CustomPagination'
@@ -8,7 +8,7 @@ import CustomPagination from '../../CLIENT/pagination/CustomPagination'
 import { backend_server } from '../../main'
 import { Link } from 'react-router-dom'
 
-const ManageBooks = () => {
+const CategoriesBook = () => {
   const API_URL = `${backend_server}/api/v1/books`
   const API_SKIPFETCH = `${backend_server}/api/v1/book/`
 
@@ -58,11 +58,11 @@ const ManageBooks = () => {
 
   return (
     <div className='container mt-2'>
-      <h1 className='h1 text-center'>Manage Books </h1>
+      <h1 className='h1 text-center'>Categories Books </h1>
 
       <div className='row my-3'>
         {/* Filter gareko books lai set Gareko */}
-        <ManageSearchBooks
+        <CategoriesSearch
           setAllBooks={setAllBooks}
           bookCategories={categories}
         />
@@ -77,18 +77,21 @@ const ManageBooks = () => {
                 <th scope='col'>#</th>
                 <th scope='col'>Title</th>
                 <th scope='col'>Category</th>
+                <th scope='col'>Author</th>
                 <th scope='col'>Image</th>
-                <th scope='col'>Featured</th>
+                <th scope='col'>Language</th>
                 <th scope='col'>Available</th>
-                <th scope='col'> Update</th>
+                
+              
               </tr>
             </thead>
             <tbody>
               {allBooks.map((book, index) => {
-                const { _id, title, category,image, featured, available } = book
+                const { _id, title, category,author,image,language,available } = book
                 const imgSrc = `${backend_server}/${image}`
+
                 // Convert boolean values to strings
-                const featuredText = featured ? 'Yes' : 'No'
+                // const featuredText = featured ? 'Yes' : 'No'
                 const availableText = available ? 'Yes' : 'No'
 
                 return (
@@ -96,16 +99,10 @@ const ManageBooks = () => {
                     <th scope='row'>{index + 1}</th>
                     <td>{title}</td>
                     <td>{category}</td>
-                    <td> <img src={imgSrc} alt={title} style={{ width: '100px', height: 'auto' }} /></td>
-                    <td>{featuredText}</td>
+                    <td>{author}</td>
+                    <td>  <img src={imgSrc} alt={title} style={{ width: '100px', height: 'auto' }} /></td>
+                    <td>{language}</td>
                     <td>{availableText}</td>
-                    <td>
-                      <Link to={`/admin/managebooks/${_id}`}>
-                        <button className='btn mx-1 edit-books-btn'>
-                          View Details
-                        </button>
-                      </Link>
-                    </td>
                   </tr>
                 )
               })}
@@ -126,4 +123,4 @@ const ManageBooks = () => {
   )
 }
 
-export default ManageBooks
+export default CategoriesBook

@@ -15,7 +15,7 @@ const booksRouterRecentBooks = require("./routes/booksRoutesRecentBooks");
 const booksRouterFeaturedBooks = require("./routes/booksRoutesFeatured");
 const requestBookRouter = require("./routes/requestBooksRoute");
 const popularBooksRouter = require("./routes/popularBooksRoutes");
-
+ 
 const userRouter = require("./routes/usersRoute");
 
 const CheckBookReturnRouter = require("./routes/checkBookReturn");
@@ -26,8 +26,9 @@ const logoutRouter = require("./routes/logoutRoute");
 const forgotpasswordRouter = require("./routes/forgotpassword");
 
 const filterRouter = require("./routes/filterRoutes");
-
+const filtertranRouter = require("./routes/filtertranRoutes");
 const adminHomePageInfoRouter = require("./routes/adminHomePageInfoRoute");
+const UserLastBook = require('./models/userLastBook');
 
 const CustomError = require("./errorHandler/CustomError");
 const PageNotFound = require("./errorHandler/PageNotFound");
@@ -62,6 +63,7 @@ app.use("/api/v1/forgotpassword", forgotpasswordRouter);
 
 // Filter Books
 app.use("/api/v1/filter", filterRouter);
+app.use("/api/v1/filter/transactions",filtertranRouter)
 
 // ALL BOOKS CRUD (Dynamic Middleware Setup on API Endpoints)
 app.use("/api/v1/books", booksRouter);
@@ -91,6 +93,29 @@ app.use(
   adminHomePageInfoRouter
 );
 
+app.get('/api/userlastbooks', async (req, res) => {
+  try {
+    const userLastBooks = await UserLastBook.find();
+    res.json(userLastBooks);
+  } catch (error) {
+    console.error('Error fetching user last books:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// app.get('/api/v1/requestBooks', async (req, res) => {
+//   try {
+//     let query = {};
+//     if (req.query.issueStatus) {
+//       query.issueStatus = req.query.issueStatus.toUpperCase(); // Filter by issueStatus if provided
+//     }
+//     const books = await BookTransaction.find(query);
+//     res.json({ data: books, totalHits: books.length });
+//   } catch (error) {
+//     res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// });
+
 // Update Users Email - ADMIN
 const UpdateUserEmailRouter = require("./routes/updateUserEmailRoute");
 app.use(
@@ -119,8 +144,13 @@ app.use("/api/v1/query", QueryRouter);
 app.use(CustomError);
 app.use(PageNotFound);
 
+
+
+
+
+
 // Server
-const port = process.env.CONNECTION_PORT || 3000;
+const port = process.env.CONNECTION_PORT || 4000;
 const InitiateServer = async () => {
   try {
     await ConnectDatabase(process.env.CONNECTION_URL);

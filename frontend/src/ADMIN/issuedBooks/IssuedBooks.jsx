@@ -47,7 +47,7 @@ const IssuedBooks = () => {
                 <tr>
                   <th scope='col'>#</th>
                   <th scope='col'>Book</th>
-                  {/* <th scope='col'>Username</th> */}
+                   <th scope='col'>Username</th> 
                   <th scope='col'>Email</th>
                   <th scope='col'>Issue Date</th>
                   <th scope='col'>Return Due</th>
@@ -72,7 +72,7 @@ const IssuedBooks = () => {
                     <tr key={_id}>
                       <th scope='row'>{index + 1}</th>
                       <td>{bookTitle}</td>
-                      {/* <td>{username}</td> */}
+                      <td>{username}</td>
                       <td>{userEmail}</td>
                       <td>{new Date(issueDate).toDateString()}</td>
                       <td>{new Date(returnDate).toDateString()}</td>

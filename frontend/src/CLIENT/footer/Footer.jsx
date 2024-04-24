@@ -11,8 +11,8 @@ const Footer = () => {
             <h5 className='h5 mt-3'>Info</h5>
             <ul className='list-unstyled'>
               <li>Email: info@library.com</li>
-              <li>Phone: +977-9801234568</li>
-              <li>Address: Kathmandu,Nepal</li>
+              <li>Phone: +91 9852532453</li>
+              <li>Address: Valsad</li>
             </ul>
           </div>
           <div className='col-md-4'>

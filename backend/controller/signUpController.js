@@ -42,6 +42,12 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASSWORD,
   },
 })
+// host: "smtp.ethereal.email",
+//   port: 587,
+//   secure: false, // Use `true` for port 465, `false` for all other ports
+//   auth: {
+//     user: "maddison53@ethereal.email",
+//     pass: "jn7jnAPss4f63QBp6D",
 
 // Function to send an email
 const sendEmail = async (to, otp) => {

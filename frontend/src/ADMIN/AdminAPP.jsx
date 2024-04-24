@@ -14,10 +14,15 @@ import AddNewBook from "./addNewBook/AddNewBook";
 import AdminLogout from "./adminLogout/AdminLogout";
 import UserIndividualPage from "./viewUsers/UserIndividualPage";
 import IssueBookToUser from "./issuedBooks/IssueBookToUser";
+import CategoriesBook from './reports/CategoriesBook';
 import Sidebar from "./sidebar/Sidebar";
 import AdminSignup from "./createAdminAccount/AdminSignup";
 // import AdminOtpForm from "./adminOTP/adminOtpForm";
 import AdminOtpForm from "./adminOTP/AdminOtpForm";
+import IssueStatus from "./reports/issuestatus";
+import BookRequestedStatus from "./reports/BookRequestedStatus";
+import UserLastBook from "./reports/UserLastBook";
+
 
 const AdminAPP = () => {
   return (
@@ -56,6 +61,22 @@ const AdminAPP = () => {
                 <Route
                   path="/admin/managebooks/:id"
                   element={<EditBookForm />}
+                />
+                <Route
+                  path="/admin/reports/categoriesbook"
+                  element={<CategoriesBook />}
+                />
+                <Route
+                  path="/admin/reports/issuestatus"
+                  element={<IssueStatus />}
+                />
+                 <Route
+                  path="/admin/reports/viewbookrequestedstatus"
+                  element={<BookRequestedStatus />}
+                />
+                 <Route
+                  path="/admin/reports/userlastbook"
+                  element={<UserLastBook />}
                 />
                 <Route path="*" element={<PagenotFound />} />
                 <Route path="/admin/adminsignup" element={<AdminSignup />} />

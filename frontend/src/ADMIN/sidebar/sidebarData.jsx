@@ -44,9 +44,37 @@ export const sidebarData = [
   //   title: `Create admin Account`,
   //   url: '/admin/adminsignup',
   // },
-
   {
     id: 10,
+    title: `Reports`,
+    url: '/admin/reports',
+    subcategories: [
+      
+      {
+        id: 1,
+        title: ` View Issue Book With Status`,
+        url: '/admin/reports/issuestatus',
+      },
+      {
+        id: 2,
+        title: `View Categories  Book`,
+        url: '/admin/reports/categoriesbook',
+      },
+     
+      {
+        id: 3,
+        title: `View All Book Request Status`,
+        url: '/admin/reports/viewbookrequestedstatus',
+      },
+      {
+        id: 4,
+        title: `View All User Last Book Issue`,
+        url: '/admin/reports/userlastbook',
+      },
+    ],
+  },
+  {
+    id: 11,
     title: `Goto Logout`,
     url: '/admin/logout',
   },

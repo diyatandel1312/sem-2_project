@@ -161,7 +161,7 @@ const postIssueBooks = async (req, res) => {
     if (checkUsersLastBook.length != 0) {
       await UserLastBookModel.findOneAndUpdate(
         { userId },
-        { lastBorrowedBookId: bookId, lastBorrowedBookTitle: title },
+        { lastBorrowedBookId: bookId, lastBorrowedBookTitle: title},
         {
           new: true, // Return the updated document
           runValidators: true, // Run validation rules on update
@@ -170,6 +170,7 @@ const postIssueBooks = async (req, res) => {
     } else {
       await UserLastBookModel.create({
         userId,
+        userName,
         userEmail,
         lastBorrowedBookId: bookId,
         lastBorrowedBookTitle: title,
@@ -183,7 +184,7 @@ const postIssueBooks = async (req, res) => {
 // issueStatus (filter PENDING BooksTransaction)
 const getRequestedBooks = async (req, res) => {
   const result = await BookTransaction.find({
-    issueStatus: { $in: ["PENDING", "READY"] },
+    issueStatus: { $in: ["PENDING", "READY",'ACCEPTED','CANCELLED'] },
   })
     .sort({ issueDate: -1 }) // 1 for ascending order, -1 for descending order
     .exec();
@@ -309,7 +310,7 @@ const patchRequestedBooks = async (req, res) => {
     if (checkUsersLastBook.length != 0) {
       await UserLastBookModel.findOneAndUpdate(
         { userId },
-        { lastBorrowedBookId: bookId, lastBorrowedBookTitle: bookTitle },
+        { lastBorrowedBookId: bookId, lastBorrowedBookTitle: bookTitle},
         {
           new: true, // Return the updated document
           runValidators: true, // Run validation rules on update
@@ -318,6 +319,7 @@ const patchRequestedBooks = async (req, res) => {
     } else {
       await UserLastBookModel.create({
         userId,
+        userName,
         userEmail,
         lastBorrowedBookId: bookId,
         lastBorrowedBookTitle: bookTitle,

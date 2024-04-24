@@ -46,9 +46,39 @@ export const adminpanelData = [
     url: '/admin/returnedbooks',
     panel_icon: <LuBackpack />,
   },
-
   {
     id: 7,
+    title: `Reports`,
+    url: '/admin/reports',
+    panel_icon: <LuBackpack />,
+    subcategories: [
+      
+      {
+        id: 1,
+        title: ` View Issue Book With Status`,
+        url: '/admin/reports/issuestatus',
+      },
+      {
+        id: 2,
+        title: `View Categories  Book`,
+        url: '/admin/reports/categoriesbook',
+      },
+     
+      {
+        id: 3,
+        title: `View All Book Request Status`,
+        url: '/admin/reports/viewbookrequestedstatus',
+      },
+      {
+        id: 4,
+        title: `View All User Last Book Issue`,
+        url: '/admin/reports/userlastbook',
+      },
+      // Add more subcategories as needed
+    ],
+  },
+  {
+    id: 8,
     title: `Goto Logout`,
     url: '/admin/logout',
     panel_icon: <AiOutlineLogout />,
